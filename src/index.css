@@ -1,13 +1,114 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #ffa17f;
+  /* background: linear-gradient(to top, #ffa17f, #00223e); */
+  color: #fff;
+  min-height: 100vh;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.feedback-list {
+  width: 80%;
+}
+.feedback-stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: bold;
+  color: #00223e;
+}
+
+.card {
+  background-color: rgba(0, 34, 62, 0.7);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem 1rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.card.reverse {
+  background-color: #fff;
+  color: rgba(0, 34, 62, 0.7);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.rating li,
+.num-display {
+  position: relative;
+  background: rgba(0, 34, 62, 1);
+  color: #fff;
+  width: 3rem;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  border: 1px #00223e solid;
+  transition: 0.3s;
+}
+
+.num-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  transform: translate(0%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffa17f;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
