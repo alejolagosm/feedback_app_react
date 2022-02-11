@@ -135,7 +135,8 @@ header {
   justify-content: center;
 }
 
-.card .close {
+.card .close,
+.card .edit {
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -144,6 +145,10 @@ header {
   position: absolute;
   right: 1rem;
   top: 1rem;
+}
+
+.card .edit {
+  right: 3rem;
 }
 
 .btn {
@@ -181,6 +186,7 @@ header {
   overflow: hidden;
 }
 .input-group input {
+  flex-grow: 2;
   border: none;
   padding: 0.5rem;
 }
